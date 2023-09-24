@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+<script src="https://kit.fontawesome.com/1f560237e7.js" crossorigin="anonymous"></script>
+<style>
+    .dv1 {
+        width: 85%;
+        height: 800px;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 10px;
+        margin-left: 50px;
+        position: relative;
+        top: -100px;
+    }
+
+    .dv1 h2 {
+        margin-left: 400px;
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica;
+        letter-spacing: 20px;
+        font-size: 30px;
+    }
+
+    #btn1 {
+        width: 200px;
+        height: 50px;
+        margin-left: 300px;
+    }
+
+    #crt {
+        border: 0.3px solid;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        width: 400px;
+        padding-left: 10px;
+        align-items: center;
+        text-align: justify;
+        flex-wrap: wrap;
+        transition-duration: 1s;
+        /* border-radius: 10px; */
+        z-index: 1;
+        background-color: white;
+        /* box-shadow: 10px 5px 15px black; */
+    }
+
+    #crt input {
+        width: 60%;
+        height: 40px;
+        outline: none;
+    }
+
+    #crt button {
+        margin-left: 250px;
+    }
+
+    #exp {
+        border: 0.3px solid;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        width: 400px;
+        padding-left: 10px;
+        align-items: center;
+        text-align: justify;
+        flex-wrap: wrap;
+        transition-duration: 1s;
+        /* border-radius: 10px; */
+        z-index: 1;
+        background-color: white;
+        /* box-shadow: 10px 5px 15px black; */
+    }
+
+    #exp input {
+        width: 60%;
+        height: 40px;
+        outline: none;
+    }
+
+    #exp button {
+        margin-left: 250px;
+    }
+
+    #languageName {
+        height: 70px;
+        outline: none;
+        border: 0;
+        font-size: 17px;
+    }
+
+    #btn11 {
+        height: 40px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border: 0;
+        border-radius: 120px;
+        cursor: pointer;
+    }
+
+    #btn11:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #languageSelect {
+        border: 0;
+        cursor: pointer;
+    }
+
+    #ed {
+        border: 0.4px solid;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        padding-left: 10px;
+        width: 400px;
+        align-items: center;
+        text-align: justify;
+        flex-wrap: wrap;
+        transition-duration: 1s;
+        /* border-radius: 10px; */
+        z-index: 1;
+        background-color: white;
+        /* box-shadow: 10px 5px 15px black; */
+    }
+
+    #ed input {
+        width: 60%;
+        height: 40px;
+        outline: none;
+    }
+
+    #ed button {
+        margin-left: 250px;
+    }
+
+    .dv1>input {
+        /* box-shadow: 10px 5px 15px black; */
+        outline: none;
+        padding-left: 10px;
+        font-size: 20px;
+        /* border-radius: 20px; */
+        height: 30px;
+        border: 0.4px solid;
+
+    }
+
+    .dv1 h2 {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        /* margin-left: 250px; */
+    }
+
+
+
+
+
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        padding: 20px;
+        margin-top: 400px;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .name {
+        font-size: 36px;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .contact {
+        font-size: 18px;
+        color: #555;
+    }
+
+    .section {
+        margin-top: 30px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+    }
+
+    .section p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .experience {
+        margin-top: 20px;
+    }
+
+    .experience h2 {
+        font-size: 20px;
+        color: #007bff;
+    }
+
+    .experience p {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .skills {
+        margin-top: 20px;
+    }
+
+    .skills h3 {
+        font-size: 20px;
+        color: #007bff;
+    }
+
+    .skills ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .skills li {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .skills li::before {
+        content: "\2022";
+        /* Bullet point */
+        color: #007bff;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 30px;
+        color: #777;
+    }
+
+    .leng {
+        /* border: solid; */
+        /* box-shadow: 10px 5px 15px black; */
+        /* border-radius: 10px; */
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.4px solid;
+    }
+
+    #bdy {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #div11 {
+        /* border: solid; */
+        position: relative;
+        top: -330px;
+        /* height: 700px; */
+    }
+
+    #h2 {
+        position: relative;
+        top: 100px;
+    }
+</style>
+
+<body id="bdy">
+    <div class="dv1">
+        <h2 id="h2">Make Resume</h2><br><br><br><br>
+        <input id="fname" type="text" placeholder="Enter first Name">
+        <input id="sname" type="text" placeholder="Enter SurName">
+        <input id="adr" type="text" placeholder="Home Address">
+        <input id="email" type="text" placeholder="Email Address">
+        <input id="cnumber" type="number" placeholder="Contact Number">
+        <div id="exp">Expierence <button onclick="down()"><i class="fa-solid fa-angle-down"></i></button></div>
+        <input id="skills" type="text" placeholder="Skills">
+        <input id="edu" type="text" placeholder="Education">
+        <div id="ed"> Education<button onclick="down1()"><i class="fa-solid fa-angle-down"></i></button></div>
+        <div id="crt">Certification<button onclick="down2()"><i class="fa-solid fa-angle-down"></i></button></div>
+        <input id="hobby" type="text" placeholder="Hobby">
+        <div class="leng">
+            <input id="languageName" type="text" placeholder="Language Name">
+            <select id="languageSelect">
+                <option value="fluent">Fluent</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="beginner">Beginner</option>
+            </select>
+
+            <button id="btn11" onclick="addLanguage()">Add Language</button>
+
+        </div>
+        <input id="postal" type="text" placeholder="Postal Code">
+        <input id="pr" type="text" placeholder="Tell About your Professional life">
+        <br>
+        <button id="btn1" onclick="save()">submit</button>
+    </div>
+
+
+
+    <div id="div11">
+        <div class="container">
+            <div class="header">
+                <div class="name"></div>
+                <div class="contact">
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Professional Profile</h2>
+                <p id="prof"></p>
+            </div>
+
+            <div class="experience">
+                <h2>Work Experience</h2>
+                <h3 id="job"></h3>
+                <p id="job1"></p>
+                <p class="description"> </p>
+
+
+            </div>
+
+            <div class="section skills">
+                <h2>Skills</h2>
+                <ul id="ul1">
+
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Qualifications</h2>
+                <ul id="ul2">
+
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Certifications</h2>
+                <ul id="ul3">
+
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Hobbies</h2>
+                <ul id="hob">
+
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Languages</h2>
+                <ul id="languageList">
+
+                </ul>
+
+            </div>
+
+            <div class="footer">
+                &copy; 2023 $HERRY
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    let obj = [{}];
+    let expobj = [{}];
+    let eduobj = [{}];
+    let crtobj = [{}]
+    function down() {
+        exp.style.height = "300px";
+        exp.innerHTML = `
+            <label for="field">Field of Experience:</label>
+            <input id='field' type='text' placeholder="Field of Experience"> 
+            <label for="sdate">Starting Date:</label>
+            <input id='sdate' type='date' placeholder="Starting date">
+            <label for="edate">Ending Date:</label>
+            <input id='edate' type='date' placeholder="Ending date">
+            <label for="cname">Company Name:</label>
+            <input id='cname' type='text' placeholder="Company Name"> 
+            <label for="desig">Designation:</label>
+            <input id='desig' type='text' placeholder="Designation">
+            <input id='desc'  type='text' placeholder="description">
+            <button onclick='expsave()'>Save</button>`;
+    }
+
+    function expsave() {
+        expobj.field_of_experience = document.getElementById('field').value;
+        expobj.starting_date = document.getElementById('sdate').value;
+        expobj.ending_date = document.getElementById('edate').value;
+        expobj.Company_name = document.getElementById('cname').value;
+        expobj.designation = document.getElementById('desig').value;
+        expobj.description = document.getElementById('desc').value;
+        sdate.value = "";
+        edate.value = "";
+        cname.value = "";
+        desig.value = "";
+        desc.value = "";
+        console.log(expobj);
+
+
+        const workExperienceDiv = document.createElement('div');
+        workExperienceDiv.innerHTML = `
+    <h3>${expobj.designation} - ${expobj.Company_name}</h3>
+    <p>${expobj.starting_date} - ${expobj.ending_date}</p>
+    <p class="description">${expobj.description}</p>
+`;
+
+
+        const workExperienceSection = document.querySelector('.experience');
+        workExperienceSection.appendChild(workExperienceDiv);
+    };
+
+
+    function down1() {
+        ed.style.height = "300px";
+        ed.innerHTML = `
+            <label for="deggre">Degree:</label>
+            <input id='deggre' type='text' placeholder="Degree"> 
+            <label for="pyear">Passing year:</label>
+            <input id='pyear' type='date' placeholder="Passing Year">
+            <label for="inst">Institute Name:</label>
+            <input id='inst' type='text' placeholder="Institute Name"> 
+            <label for="omarks">Obtained Marks:</label>
+            <input id='omarks' type='number' placeholder="Obtained Marks">
+            <label for="tmarks">Total Marks:</label>
+            <input id='tmarks' type='number' placeholder="Total Marks">
+            <button onclick='edusave()'>Save</button>`;
+    }
+
+    function edusave() {
+        eduobj.Degree = document.getElementById('deggre').value;
+        eduobj.Passing_year = document.getElementById('pyear').value;
+        eduobj.Institute = document.getElementById('inst').value;
+        eduobj.Obtained_marks = document.getElementById('omarks').value;
+        eduobj.Total_marks = document.getElementById('tmarks').value;
+        deggre.value = ""
+        pyear.value = ""
+        inst.value = ""
+        omarks.value = ""
+        tmarks.value = ""
+        console.log(eduobj);
+
+        let quali = document.createElement('li');
+        quali.innerHTML += `${eduobj.Degree} --${eduobj.Institute}(${eduobj.Passing_year})
+  Obtained Marks :${eduobj.Obtained_marks} Total Marks : ${eduobj.Total_marks}`
+
+        ul2.appendChild(quali)
+    }
+    function down2() {
+        crt.style.height = "300px";
+        crt.innerHTML = `
+            <label for="Certificate Name">Certificate:</label>
+            <input id='crtname' type='text' placeholder="Degree"> 
+            <label for="year">year:</label>
+            <input id='year' type='date' placeholder="Certificate Year">
+            <label for="inst">Institute Name:</label>
+            <input id='institute' type='text' placeholder="Degree"> 
+            <button onclick='crtsave()'>Save</button>`;
+    }
+
+    function crtsave() {
+        crtobj.Certificate_name = document.getElementById('crtname').value;
+        crtobj.Passing_year = document.getElementById("year").value;
+        crtobj.Institute = document.getElementById('institute').value;
+
+       
+        console.log(crtobj);
+
+        let crti = document.createElement('li');
+        crti.innerHTML += `${crtobj.Certificate_name} -- ${crtobj.Institute}(${crtobj.Passing_year})`
+
+        ul3.appendChild(crti)
+    }
+
+
+    function save() {
+        obj.fullName = `${document.getElementById('fname').value} ${document.getElementById('sname').value}`;
+        obj.Address = document.getElementById('adr').value;
+        obj.Postalcode = document.getElementById('postal').value;
+        obj.email = document.getElementById('email').value;
+        obj.contact = document.getElementById('cnumber').value;
+        obj.expirence = expobj;
+        obj.skills = document.getElementById('skills').value;
+        obj.Education = document.getElementById('edu').value;
+        obj.Certification = document.getElementById('crt').value;
+        obj.hobbys = document.getElementById('hobby').value;
+        obj.professional_life = document.getElementById('pr').value;
+   
+
+        console.table(obj);
+
+
+        let name = document.querySelector('.name');
+        name.innerHTML = `${obj.fullName}`;
+
+        let contact = document.querySelector('.contact');
+        contact.innerHTML = `
+            Email: ${obj.email}<br>
+            Phone: ${obj.contact}<br>
+            Postal Code: ${obj.Postalcode}`;
+
+
+        let skillist = document.createElement('li');
+        skillist.innerHTML += `${obj.skills}`
+
+        ul1.appendChild(skillist)
+        skills.value = ""
+
+        let hoby = document.createElement('li');
+        hoby.style.listStyle = "none"
+        hoby.innerHTML += `${obj.hobbys}`
+
+        hob.appendChild(hoby)
+        hobby.value = ""
+
+        let prof = document.getElementById('prof')
+        prof.innerHTML = `${obj.professional_life}`
+        pr.value = ""
+    }
+    function addLanguage() {
+        const languageSelect = document.getElementById('languageSelect');
+        const languageName = document.getElementById('languageName');
+        const languageLevel = languageSelect.options[languageSelect.selectedIndex].text;
+
+        if (languageName.value.trim() === '') {
+            alert('Please enter a language name.');
+            return;
+        }
+
+        const languageList = document.getElementById('languageList');
+        const languageItem = document.createElement('li');
+        languageItem.innerHTML = `${languageLevel} - ${languageName.value}`;
+        languageList.appendChild(languageItem);
+
+        languageName.value = '';
+        languageSelect.selectedIndex = 0; 
+    }
+</script>
+
+
+
+</html>
