@@ -1,0 +1,82 @@
+.App {
+  /* padding: 20px; */
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 50px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  margin-bottom: 40px;
+  width: 80%;
+  /* border: solid; */
+  
+}
+
+.resume-preview {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width:80%;
+
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.experience, .education, .certifications, .skills, .languages, .hobbies {
+  margin-bottom: 20px;
+}
+#header{
+/* border-bottom: solid 0.6px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  letter-spacing:20px;
+}
+
+.app-container {
+  padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  .App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+#header{
+  letter-spacing: 7px;
+  font-size: 20px;
+}
+  .form-container,
+  .cv-template {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .cv-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-info p,
+  section p {
+    font-size: 0.9rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
