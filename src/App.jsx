@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import ResumeForm from './ResumeForm';
-import CVTemplate from './CVTemplate';
+import ResumeForm from './components/ResumeForm';
+import CVTemplate from './components/ResumePreview';
+import CVTemplate2 from './components/cv2';
 
 function App() {
   const [formData, setFormData] = useState(null);
@@ -9,6 +10,7 @@ function App() {
   const [certifications, setCertifications] = useState([]);
   const [languages, setLanguages] = useState([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [template, setTemplate] = useState('template1');
 
   const handleFormSave = (data) => {
     setFormData(data);
@@ -31,6 +33,14 @@ function App() {
     setLanguages([...languages, lang]);
   };
 
+  const handleTemplateChange = (e) => {
+    setTemplate(e.target.value);
+  };
+
+  const handleEdit = () => {
+    setIsSubmitted(false);
+  };
+
   return (
     <div className="app-container">
       {!isSubmitted ? (
@@ -42,13 +52,35 @@ function App() {
           onLanguageAdd={handleLanguageAdd}
         />
       ) : (
-        <CVTemplate
-          formData={formData}
-          experience={experience}
-          education={education}
-          certifications={certifications}
-          languages={languages}
-        />
+        <>
+          <div>
+            <label>Select Template: </label>
+            <select value={template} onChange={handleTemplateChange}>
+              <option value="template1">Template 1</option>
+              <option value="template2">Template 2</option>
+            </select>
+          </div>
+
+          {template === 'template1' ? (
+            <CVTemplate
+              formData={formData}
+              experience={experience}
+              education={education}
+              certifications={certifications}
+              languages={languages}
+              onEdit={handleEdit}
+            />
+          ) : (
+            <CVTemplate2
+              formData={formData}
+              experience={experience}
+              education={education}
+              certifications={certifications}
+              languages={languages}
+              onEdit={handleEdit}
+            />
+          )}
+        </>
       )}
     </div>
   );

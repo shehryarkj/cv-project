@@ -1,0 +1,30 @@
+.cd1{
+    /* border: solid; */
+    display: grid;
+    grid-template-columns: 25% 78%;
+    gap: 50px;
+    font-family:sans-serif;
+}
+.cd1-d1{
+    border-right:solid;
+}
+.cv2-template {
+    width: 60%;
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica', sans-serif;
+    color: #333;
+    /* border: solid; */
+    position: relative;
+    top: -30px;
+  }
+  .profile-section p{
+    
+    border: solid;
+    height: 100px;
+     
+  }
